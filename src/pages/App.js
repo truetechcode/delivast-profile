@@ -49,7 +49,9 @@ function App(props) {
           </Col>
         </Row>
       </Container>
-      <Image src={Stroke} className="stroke" fluid />{' '}
+      <Container>
+        <Image src={Stroke} className="stroke" fluid />{' '}
+      </Container>
     </Container>
   );
 }
