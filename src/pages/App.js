@@ -1,12 +1,9 @@
-import logo from '../assets/images/logo.svg';
 import '../assets/css/App.css';
-import { Button, Container, Row, Col, Image } from 'react-bootstrap';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
-  Link
 } from "react-router-dom";
 
 // Components
@@ -48,7 +45,6 @@ function App(props) {
               <Route path="/shopping-cart" component={UserShoppingCart} />
               <Route path="/cart" component={UserCart} />
               <Route path="/signin" component={SignIn} />
-              {/* <Route component={Error} /> */}
             </Switch>
           </Col>
         </Row>

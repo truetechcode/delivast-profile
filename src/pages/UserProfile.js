@@ -1,6 +1,5 @@
 import React from 'react'
 import '../assets/css/UserProfile.css';
-import Avatar from '../assets/images/logo.png';
 import { Row, Col, Image, Form, Button } from 'react-bootstrap';
 
 const UserProfile = () => {
