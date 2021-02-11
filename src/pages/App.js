@@ -11,8 +11,14 @@ import SideBar from '../components/SideBar';
 
 import Stroke from '../assets/images/bottom-stroke.svg';
 
+// Pages
 
 import UserProfile from '../pages/UserProfile';
+import UserAddresses from '../pages/UserAddresses';
+import UserContacts from '../pages/UserContacts';
+import UserOrders from '../pages/UserOrders';
+import UserShoppingList from '../pages/UserShoppingList';
+import UserShoppingCart from '../pages/UserShoppingCart';
 
 function App(props) {
   return (
