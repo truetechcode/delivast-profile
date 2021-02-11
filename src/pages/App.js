@@ -2,6 +2,13 @@ import logo from '../assets/images/logo.svg';
 import '../assets/css/App.css';
 import { Button, Container, Row, Col, Image } from 'react-bootstrap';
 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+
 // Components
 
 import Header from '../components/Header';
@@ -19,6 +26,8 @@ import UserContacts from '../pages/UserContacts';
 import UserOrders from '../pages/UserOrders';
 import UserShoppingList from '../pages/UserShoppingList';
 import UserShoppingCart from '../pages/UserShoppingCart';
+import UserCart from '../pages/UserCart';
+import SignIn from '../pages/SignIn';
 
 function App(props) {
   return (
@@ -30,7 +39,17 @@ function App(props) {
             <SideBar />
           </Col>
           <Col sm={10}>
-            <UserProfile />
+            <Switch>
+              <Route path="/" component={UserProfile} exact />
+              <Route path="/addresses" component={UserAddresses} />
+              <Route path="/contacts" component={UserContacts} />
+              <Route path="/orders" component={UserOrders} />
+              <Route path="/shopping-list" component={UserShoppingList} />
+              <Route path="/shopping-cart" component={UserShoppingCart} />
+              <Route path="/cart" component={UserCart} />
+              <Route path="/signin" component={SignIn} />
+              {/* <Route component={Error} /> */}
+            </Switch>
           </Col>
         </Row>
       </Container>
