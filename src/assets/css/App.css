@@ -1,7 +1,13 @@
-.App {
-  text-align: center;
+.app {
+  background-color: #fff;
+  padding: 0 100px;
 }
 
+.stroke {
+    width: 86.9%;
+    margin-left: 87px;
+    margin-top: -2px;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;

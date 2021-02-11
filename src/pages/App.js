@@ -1,24 +1,35 @@
 import logo from '../assets/images/logo.svg';
 import '../assets/css/App.css';
+import { Button, Container, Row, Col, Image } from 'react-bootstrap';
 
-function App() {
+// Components
+
+import Header from '../components/Header';
+import SideBar from '../components/SideBar';
+
+// Stroke
+
+import Stroke from '../assets/images/bottom-stroke.svg';
+
+
+import UserProfile from '../pages/UserProfile';
+
+function App(props) {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container className="app-container" fluid>
+      <Container className="app">
+        <Header />
+        <Row>
+          <Col sm={2}>
+            <SideBar />
+          </Col>
+          <Col sm={10}>
+            <UserProfile />
+          </Col>
+        </Row>
+      </Container>
+      <Image src={Stroke} className="stroke" fluid />{' '}
+    </Container>
   );
 }
 
