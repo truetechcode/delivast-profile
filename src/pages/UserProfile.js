@@ -18,7 +18,7 @@ const UserProfile = () => {
                 // handle success
                 let { name, email, phone, picture } = response.data.results[0];
 
-                setUser({ ...user, firstName: name.first, lastName: name.last, email: email, phone: phone, imageUrl: picture.medium })
+                setUser({ firstName: name.first, lastName: name.last, email: email, phone: phone, imageUrl: picture.medium })
 
             })
             .catch(function (error) {
